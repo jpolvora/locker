@@ -103,7 +103,7 @@ class Locker
     if ($this->released) throw new Error('already released');
 
     if ($this->lock) {
-      flock($this->lock, LOCK_UN);    // release the lock
+      flock($this->lock, LOCK_UN);    // release5 the lock
       fclose($this->lock);
     }
     unlink($this->filename);
